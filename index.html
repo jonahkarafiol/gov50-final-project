@@ -1517,11 +1517,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
 <h2 id="project-thoughts">Project thoughts</h2>
 <p>I am interested in exploring data related to drug consumption in Harvard Students
 – particularly alcohol and marijuana usage – and how it relates to academic
 performance, as measured by GPA. I know that I would have to collect my own data
 to use this idea as a final project topic.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>nba_elo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"C:\\Users\\jonah\\Downloads\\nba_elo_latest.csv"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Does perceived importance impact how basketball teams perform? In this study, I plan to examine the extent to which the importance of a game on NBA Championship chances impacts NBA scores. I hypothesize that in more important games, the favorite will beat the underdog by a larger margin of victory on average than in less important games. My sample is NBA games from the 2022-2023 season, although I have the data to go back further if I deem it necessary. My unit of analysis is an NBA game. The explanatory variable of interest is the game’s importance, as measured by 538. Importance essentially measures how the outcome of a game will change each team’s statistical outlook on the season. Importance is measured numerically on a scale of 0 to 100, with 0 being the least important and 100 being the most important. My outcome variable is the difference in scores, as this shows not only who won but the magnitude of their victory. For instance, a value of 11 would indicate that the winning team beat the losing team by 11 points, while an outcome variable of -5 would indicate the losing team beat the winning team by 5. If I observe that games with higher importance also have higher outcomes, my hypothesis would be supported. If games with higher importance had lower average outcomes than games with lower importance, this would provide evidence against my hypothesis. When I run my regression of the importance of a game on my outcome variable, a positive, significant coefficient would indicate support for my hypothesis.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
