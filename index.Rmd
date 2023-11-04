@@ -8,7 +8,6 @@ output:
 ---
 
 ```{r}
-library(tidyverse)
 library(ggplot2)
 library(dplyr)
 library(readr)
@@ -23,6 +22,19 @@ to use this idea as a final project topic.
 
 ```{r}
 nba_elo <- read_csv("C:\\Users\\jonah\\Downloads\\nba_elo_latest.csv")
+
+nba_elo <- nba_elo |>
+  mutate(elo_gap = abs(elo1_pre - elo2_pre),
+         fav_won = (elo1_pre > elo2_pre & score1 > score2) 
+                 | (elo1_pre < elo2_pre & score1 < score2))
+
+fav_elo_plot <- ggplot(nba_elo, aes(x = elo_gap, y = importance)) +
+  geom_point(aes(color = fav_won), size = 2) +
+  labs(x = "Elo Gap", y = "Importance", color = "Favorite Team Won?") +
+  ggtitle("Impact of Importance on Favorite Teams Winning")
+
+fav_elo_plot
+
 ```
 
 Does perceived importance impact how basketball teams perform? In this study, I plan to examine the extent to which the importance of a game on NBA Championship chances impacts NBA scores. I hypothesize that in more important games, the favorite will beat the underdog by a larger margin of victory on average than in less important games. My sample is NBA games from the 2022-2023 season, although I have the data to go back further if I deem it necessary. My unit of analysis is an NBA game. The explanatory variable of interest is the game's importance, as measured by 538. Importance essentially measures how the outcome of a game will change each team's statistical outlook on the season. Importance is measured numerically on a scale of 0 to 100, with 0 being the least important and 100 being the most important. My outcome variable is the difference in scores, as this shows not only who won but the magnitude of their victory. For instance, a value of 11 would indicate that the winning team beat the losing team by 11 points, while an outcome variable of -5 would indicate the losing team beat the winning team by 5. If I observe that games with higher importance also have higher outcomes, my hypothesis would be supported. If games with higher importance had lower average outcomes than games with lower importance, this would provide evidence against my hypothesis. When I run my regression of the importance of a game on my outcome variable, a positive, significant coefficient would indicate support for my hypothesis.
