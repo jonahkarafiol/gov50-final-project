@@ -12,14 +12,6 @@ library(ggplot2)
 library(dplyr)
 library(readr)
 ```
-
-## Project thoughts
-
-I am interested in exploring data related to drug consumption in Harvard Students
--- particularly alcohol and marijuana usage -- and how it relates to academic
-performance, as measured by GPA. I know that I would have to collect my own data
-to use this idea as a final project topic.
-
 ```{r}
 nba_elo <- read_csv("C:\\Users\\jonah\\Downloads\\nba_elo_latest.csv")
 
@@ -35,6 +27,13 @@ fav_elo_plot <- ggplot(nba_elo, aes(x = elo_gap, y = importance)) +
 
 fav_elo_plot
 
+lm_model <- lm(fav_won ~ importance, data = nba_elo) |>
+  broom::tidy() |>
+  knitr::kable(digits = 5)
+
+lm_model
 ```
 
 Does perceived importance impact how basketball teams perform? In this study, I plan to examine the extent to which the importance of a game on NBA Championship chances impacts NBA scores. I hypothesize that in more important games, the favorite will beat the underdog by a larger margin of victory on average than in less important games. My sample is NBA games from the 2022-2023 season, although I have the data to go back further if I deem it necessary. My unit of analysis is an NBA game. The explanatory variable of interest is the game's importance, as measured by 538. Importance essentially measures how the outcome of a game will change each team's statistical outlook on the season. Importance is measured numerically on a scale of 0 to 100, with 0 being the least important and 100 being the most important. My outcome variable is the difference in scores, as this shows not only who won but the magnitude of their victory. For instance, a value of 11 would indicate that the winning team beat the losing team by 11 points, while an outcome variable of -5 would indicate the losing team beat the winning team by 5. If I observe that games with higher importance also have higher outcomes, my hypothesis would be supported. If games with higher importance had lower average outcomes than games with lower importance, this would provide evidence against my hypothesis. When I run my regression of the importance of a game on my outcome variable, a positive, significant coefficient would indicate support for my hypothesis.
+
+My first regression contained multiple useful pieces of information. First, we see that intercept is .68334. This means that in games when the importance is zero, the favorite wins 68.33% of the time. We also see that the coefficient for importance is -.00252, meaning that, holding all other variables constant, a one-unit increase in importance results in a decrease of .00252 units in the fav_won variable. In other words, for every one-unit increase in importance, the favorite team's probability of winning decreases by 0.252 percentage points. The p-values of zero in both the intercept and importance suggest statistically significant findings.
