@@ -88,29 +88,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Gov 50 Final Project</title>
+  <title>Importance and Favored Team Performance in NBA Games</title>
 
-  <meta property="description" itemprop="description" content="My final project"/>
+  <meta property="description" itemprop="description" content="A Statistical Analysis Utilizing 538&#39;s Elo and Importance"/>
 
 
   <meta name="article:author" content="Jonah Karafiol"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Gov 50 Final Project"/>
+  <meta property="og:title" content="Importance and Favored Team Performance in NBA Games"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="My final project"/>
+  <meta property="og:description" content="A Statistical Analysis Utilizing 538&#39;s Elo and Importance"/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Gov 50 Final Project"/>
-  <meta property="twitter:description" content="My final project"/>
+  <meta property="twitter:title" content="Importance and Favored Team Performance in NBA Games"/>
+  <meta property="twitter:description" content="A Statistical Analysis Utilizing 538&#39;s Elo and Importance"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Gov 50 Final Project"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jonah Karafiol"]}]}]},{"type":"character","attributes":{},"value":["My final project"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Importance and Favored Team Performance in NBA Games"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jonah Karafiol"]}]}]},{"type":"character","attributes":{},"value":["A Statistical Analysis Utilizing 538's Elo and Importance"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1493,7 +1493,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Gov 50 Final Project","description":"My final project","authors":[{"author":"Jonah Karafiol","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}]}
+{"title":"Importance and Favored Team Performance in NBA Games","description":"A Statistical Analysis Utilizing 538's Elo and Importance","authors":[{"author":"Jonah Karafiol","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1503,10 +1503,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Gov 50 Final Project</h1>
+<h1>Importance and Favored Team Performance in NBA Games</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p>My final project</p>
+<p>A Statistical Analysis Utilizing 538’s Elo and Importance</p>
 </div>
 
 <div class="d-byline">
@@ -1553,7 +1553,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>lm_model</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>fav_won</span> <span class='op'>~</span> <span class='va'>importance</span>, data <span class='op'>=</span> <span class='va'>raptor_elo</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'>broom</span><span class='fu'>::</span><span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>3</span>,</span>
+<span>  <span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>5</span>,</span>
 <span>               col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Term"</span>, <span class='st'>"Coefficient"</span>, <span class='st'>"Std. Error"</span>, <span class='st'>"Statistic"</span>, <span class='st'>"P-value"</span><span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>lm_model</span></span></code></pre>
@@ -1571,24 +1571,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">0.693</td>
-<td style="text-align: right;">0.02</td>
-<td style="text-align: right;">35.226</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.69305</td>
+<td style="text-align: right;">0.01967</td>
+<td style="text-align: right;">35.22550</td>
+<td style="text-align: right;">0e+00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">importance</td>
-<td style="text-align: right;">-0.002</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">-4.355</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.00196</td>
+<td style="text-align: right;">0.00045</td>
+<td style="text-align: right;">-4.35475</td>
+<td style="text-align: right;">1e-05</td>
 </tr>
 </tbody>
 </table>
 </div>
 <p>First, the scatter plot is important for a few reasons. It shows that there aren’t many games with high importance between teams with large elo gaps. This makes sense: a team with a very low elo probably has poor chances for making the playoffs or winning the championship, regardless of their performance in any given game. Since importance is calculated as an average of the individual importance a game holds for both teams in a game, the low importance brought by a bad team drags down the overall importance. However, the data is promising because it shows many important games where underdogs overcame elo gaps, and even moderately sized ones. More analysis needed to draw conclusions, though.</p>
 <p>Now, we should break down the intercept data. The value of 0.693 is the probability that the favored team wins when controlling for importance; if all games had no importance, the favored team would be expected to win approximately 69.3% of the time. The standard error was .02, meaning that this approximate has about two percentage points of uncertainty; we might expect the true probability to be somewhere between 67.3% and 71.3%.</p>
-<p>Next, importance. The coefficient was -.002; the negative sign indicates that as importance increases, the likelihood that the favored team won decreased. The value of .002 is by how much; as importance increased by one, the favored team had a .2 percentage point smaller chance of winning. The p-value is listed as zero in the table, but using get_p_value, I found it to be approximately .0001; this indicates a statistically significant impact of importance on whether or not the favored team won with an extremely high level of certainty. As such, I can reject the null hypothesis that importance has no impact on whether or not the favored team won; this data and my analysis suggests that importance has a statistically significant negative correlation with the performance of the favored team. I am hesitant to draw a conclusion from this due to the nature of it being a cross-sectional study. Since each game was only played once, we cannot tell with certainty what would happen if the exact same game was replayed with more or less importance. As such, we can only draw conclusions based on correlation. Moreover, several confounders may be present. I discuss these further in the conclusion.</p>
+<p>Next, importance. The coefficient was -.002; the negative sign indicates that as importance increases, the likelihood that the favored team won decreased. The value of .002 is by how much; as importance increased by one, the favored team had a .2 percentage point smaller chance of winning. The p-value is approximately .0001; this indicates a statistically significant impact of importance on whether or not the favored team won with an extremely high level of certainty. As such, I can reject the null hypothesis that importance has no impact on whether or not the favored team won; this data and my analysis suggests that importance has a statistically significant negative correlation with the performance of the favored team. I am hesitant to draw a conclusion from this due to the nature of it being a cross-sectional study. Since each game was only played once, we cannot tell with certainty what would happen if the exact same game was replayed with more or less importance. As such, we can only draw conclusions based on correlation. Moreover, several confounders may be present. I discuss these further in the conclusion.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>My results suggest a statistically significant negative correlation between importance and the performance of the favored team, since the coefficient was -.002 and the p-value was .0001. This provides very strong support for my hypothesis: that favored teams will have a lower chance of winning in games that are more important as opposed to games that are less important. Unfortunately, the presence of confounders muddles my certainty about this data. The largest confounder is individual team elo. Teams that are better are more likely to be championship contenders, and wins and losses therefore will have a larger sway on their championship odds. Conversely, terrible teams will be unlikely to win a championship or make a playoff, regardless of whether or not they win one game in an 82-game season. This problem grows as the season goes on: teams that have been eliminated from playoff contention will drag down the importance variable. This is a problem because it means that the games that we really care about the outcome in, games with large elo disparities and high importance, are hard to come by. The data set does not include individual importance ratings for each team, so I could not try to control for this by only taking higher importance value between two teams in a game, or subsetting the data to include favored teams facing high importance values. Of course, individual team elo also impacts the outcome of a game – the teams with the highest elos are unlikely to be underdogs and are more likely to the majority of their games, and teams with the lowest elos are very likely to be underdogs and lose the majority of their games. As such, both the importance values, and the binary variable of whether or not the favored team won, are heavily influenced by the elo values of the teams involved in the game. Additionally, teams do not always perform in ways that appear rational inside the scope of one game, and are only rational when considering the bigger picture. For instance, teams may lose games intentionally to try to bolster their chances of drafting an elite prospect; this was a large problem last season, since generational prospect Victor Wembanyama declared for the NBA Draft. Additionally, teams may choose to rest their best players before the playoffs or important games. All of these factors, as well as the nature of a cross-sectional study, make it difficult to declare a causal effect of importance on whether the favored team won. If I were to continue this analysis, I would attempt to obtain individual importance ratings as opposed to the average between two teams. Additionally, I would expand my dataset to include more seasons, and then subset the data to specifically examine high-importance games between teams with a moderate to large elo gap. There were simply not enough of these in the 2022-2023 season, as measured by the scatterplot, so expanding the dataset would be necessary. Still, I am comfortable saying that there is solid evidence of some negative correlation between importance and favored team performance, although it may be less certain and less significant than the p-value and coefficient indicated.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
